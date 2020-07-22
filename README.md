@@ -13,12 +13,12 @@ A zEdit patcher goes through all race and NPC records in the loadorder and :
 
   1. Sets the stats in the race record to those set in the config
   
-  2. Reads the old stats in each NPC record and actor race
+  2. Reads the old stat offsets in each NPC record and actor race
   
-  3. Gets the difference between the stat for the race and that set for the NPC based on the race
+  3. If the stat offset is not 0 (for each stat)
+      
+    1. Input the offset into the `Math.tanh` function (ends up with a floating point value between -1 and 1)
   
-  4. Inputs that difference into a tanh function (ends up with a floating point value between -1 and 1)
+    2. Multiplies the result with the deviation range set in the config
   
-  5. Multiplies the result with the deviation range set in the config
-  
-  6. Adds the result of that to the stat value from the race and sets it as the stat for the NPC
+    3. Set the result as new stat Offset
