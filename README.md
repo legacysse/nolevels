@@ -28,6 +28,9 @@ The patcher goes through all NPC_ records:
 The Patcher changes / adds settings:
 
 `fNPCHealthLevelBonus` is set to 0.
+
 `fCombatHealthRegenRateMult` is set to value in config.
+
 `fCombatMagickaRegenRateMult` is set to value in config.
+
 `fCombatStaminaRegenRateMult` is set to value in config.
